@@ -117,11 +117,11 @@ public class Main extends ApplicationAdapter {
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                LoDScene s = new LoDScene(sceneAsset.scene);
-                s.modelInstance.transform.translate(i* 10 - 50, 0, j * 10 - 50);
-                s.modelInstance.transform.rotate(Vector3.Y, MathUtils.random(360));
-                scenes.add(s);
-                sceneManager.addScene(s);
+                LoDScene scene = new LoDScene(sceneAsset.scene);
+                scene.modelInstance.transform.translate(i* 10 - 50, 0, j * 10 - 50);
+                scene.modelInstance.transform.rotate(Vector3.Y, MathUtils.random(360));
+                scenes.add(scene);
+                sceneManager.addScene(scene);
             }
         }
     }
