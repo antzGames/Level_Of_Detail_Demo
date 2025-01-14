@@ -134,12 +134,12 @@ public class Main extends ApplicationAdapter {
             for (int j = 0; j < 10; j++) {
                 // Creating a new sceneAsset in the loop mimics 100 DIFFERENT GLTF files being loaded
                 sceneAsset = new GLTFLoader().load(Gdx.files.internal(modelPrefix + ".gltf"));
-                LoDScene s = new LoDScene(sceneAsset.scene);
-                s.modelInstance.transform.translate(i* 10 - 50, 0, j * 10 - 50);
-                s.modelInstance.transform.rotate(Vector3.Y, MathUtils.random(360));
-                s.loadLoDs(Gdx.files.internal(modelPrefix + ".lod")); // NEW! Load the LoD meta data
-                scenes.add(s);
-                sceneManager.addScene(s);
+                LoDScene scene = new LoDScene(sceneAsset.scene);
+                scene.modelInstance.transform.translate(i* 10 - 50, 0, j * 10 - 50);
+                scene.modelInstance.transform.rotate(Vector3.Y, MathUtils.random(360));
+                scene.loadLoDs(Gdx.files.internal(modelPrefix + ".lod")); // NEW! Load the LoD meta data
+                scenes.add(scene);
+                sceneManager.addScene(scene);
             }
         }
     }
