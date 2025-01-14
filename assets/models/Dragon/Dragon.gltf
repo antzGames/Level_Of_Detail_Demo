@@ -1,0 +1,176 @@
+{
+"asset": {
+	"generator": "GDX glTF exporter 1.0",
+	"version": "2.0"
+},
+"scenes": [
+	{
+		"nodes": [ 0 ]
+	}
+],
+"nodes": [
+	{
+		"name": "Sketchfab_model",
+		"children": [ 1 ],
+		"rotation": [ -0.7071068, 0, 0, 0.7071067 ]
+	},
+	{
+		"name": "Collada visual scene group",
+		"children": [ 2 ],
+		"rotation": [ 0.7071068, 0, 0, 0.7071067 ]
+	},
+	{
+		"name": "StanfordDragon_low",
+		"children": [ 3 ]
+	},
+	{
+		"name": "defaultMaterial",
+		"translation": [ -0.0945072, -1.4695865, 0 ],
+		"mesh": 0
+	}
+],
+"meshes": [
+	{
+		"primitives": [
+			{
+				"attributes": {
+					"NORMAL": 0,
+					"POSITION": 1,
+					"TANGENT": 3,
+					"TEXCOORD_0": 2
+				},
+				"indices": 4,
+				"material": 0
+			}
+		]
+	}
+],
+"images": [
+	{
+		"uri": "Dragon_texture0.png"
+	},
+	{
+		"uri": "Dragon_texture1.png"
+	},
+	{
+		"uri": "Dragon_texture2.png"
+	}
+],
+"samplers": [
+	{
+		"minFilter": 9987
+	},
+	{
+		"minFilter": 9987
+	},
+	{
+		"minFilter": 9987
+	},
+	{
+		"minFilter": 9987
+	}
+],
+"textures": [
+	{
+		"source": 0,
+		"sampler": 0
+	},
+	{
+		"source": 1,
+		"sampler": 1
+	},
+	{
+		"source": 2,
+		"sampler": 2
+	},
+	{
+		"source": 2,
+		"sampler": 3
+	}
+],
+"accessors": [
+	{
+		"bufferView": 0,
+		"componentType": 5126,
+		"count": 11242,
+		"type": "VEC3"
+	},
+	{
+		"bufferView": 1,
+		"componentType": 5126,
+		"count": 11242,
+		"type": "VEC3",
+		"min": [ -2.5449154, -1.4849717E-4, -1.1366457 ],
+		"max": [ 2.5508962, 3.586545, 1.13949 ]
+	},
+	{
+		"bufferView": 2,
+		"componentType": 5126,
+		"count": 11242,
+		"type": "VEC2"
+	},
+	{
+		"bufferView": 3,
+		"componentType": 5126,
+		"count": 11242,
+		"type": "VEC4"
+	},
+	{
+		"bufferView": 4,
+		"componentType": 5123,
+		"count": 57996,
+		"type": "SCALAR"
+	}
+],
+"materials": [
+	{
+		"name": "DefaultMaterial",
+		"normalTexture": {
+			"index": 1
+		},
+		"occlusionTexture": {
+			"index": 3
+		},
+		"pbrMetallicRoughness": {
+			"baseColorTexture": {
+				"index": 0
+			},
+			"metallicRoughnessTexture": {
+				"index": 2
+			}
+		}
+	}
+],
+"bufferViews": [
+	{
+		"byteLength": 134904,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 134904,
+		"byteLength": 134904,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 269808,
+		"byteLength": 89936,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 359744,
+		"byteLength": 179872,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 539616,
+		"byteLength": 115992,
+		"buffer": 0
+	}
+],
+"buffers": [
+	{
+		"uri": "Dragon.bin",
+		"byteLength": 655608
+	}
+]
+}
