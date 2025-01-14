@@ -46,7 +46,6 @@ public class Main extends ApplicationAdapter {
 
     // *** You can change Model
     private String modelPrefix = "models/Dragon/Dragon";
-    //private String modelPrefix = "models/Bunny/Bunny";
 
     @Override
     public void create() {
