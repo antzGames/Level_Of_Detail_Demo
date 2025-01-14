@@ -111,7 +111,7 @@ public class Main extends ApplicationAdapter {
         // create scene
         sceneManager = new LoDSceneManager(0);
 
-        // Since meshes are not changing do to LoDs, we can reuse the same SceneAsset
+        // Since meshes are not changing, we can reuse the same SceneAsset
         sceneAsset = new GLTFLoader().load(Gdx.files.internal(modelPrefix + ".gltf"));
 
         for (int i = 0; i < 10; i++) {
