@@ -133,6 +133,7 @@ public class Main extends ApplicationAdapter {
             for (int j = 0; j < 10; j++) {
                 // Creating a new sceneAsset in the loop mimics 100 DIFFERENT GLTF files being loaded
                 sceneAsset = new GLTFLoader().load(Gdx.files.internal(modelPrefix + ".gltf"));
+
                 LoDScene scene = new LoDScene(sceneAsset.scene);
                 scene.modelInstance.transform.translate(i* 10 - 50, 0, j * 10 - 50);
                 scene.modelInstance.transform.rotate(Vector3.Y, MathUtils.random(360));
