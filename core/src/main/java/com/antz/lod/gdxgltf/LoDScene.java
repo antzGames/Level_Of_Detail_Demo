@@ -17,6 +17,7 @@ public class LoDScene extends Scene {
 
     public LevelOfDetailDTO levelOfDetailDTO;
     public boolean lodEnabled = false;
+    public boolean lodSupported = false;
 
     public int currentLoDLevel = 0;
     public int numberOfLoDs;
@@ -37,6 +38,14 @@ public class LoDScene extends Scene {
         super(sceneModel);
     }
 
+    public void copyLoDs(LoDScene in){
+        levelOfDetailDTO = in.levelOfDetailDTO;
+        lodEnabled = in.lodEnabled;
+        numberOfLoDs = in.numberOfLoDs;
+        numberOfMeshes = in.numberOfMeshes;
+        changeModelToLoDLevel(modelInstance.model,0);
+    }
+
     public void loadLoDs(FileHandle file){
         // If no file found or any deserialization issues, revert back to normal gdx-gltf functionality
         try {
@@ -44,12 +53,15 @@ public class LoDScene extends Scene {
         } catch (Exception e) {
             Gdx.app.error("LOD", "File: " + file.name() + " LoD meta data failed to load.  LoD subsystem disabled.");
             lodEnabled = false;
+            lodSupported = false;
             return;
         }
 
         Gdx.app.log("LOD","File: " + file.name() + " has been imported.  # of meshes: " + levelOfDetailDTO.meshes.size + "    # of LoDs per mesh: " + levelOfDetailDTO.lodDistanceBreakpoints.length);
         Gdx.app.log("LOD", "Camera distance breakpoints set to: " + Arrays.toString(levelOfDetailDTO.lodDistanceBreakpoints));
+
         lodEnabled = true;
+        lodSupported = true;
         numberOfLoDs = levelOfDetailDTO.lodDistanceBreakpoints.length;
         numberOfMeshes = levelOfDetailDTO.meshes.size;
 
@@ -60,6 +72,8 @@ public class LoDScene extends Scene {
         // Simple checks on lodLevel
         if (lodLevel < 0) lodLevel = 0;
         if (lodLevel > (numberOfLoDs - 1)) lodLevel = numberOfLoDs - 1;
+
+        currentLoDLevel = lodLevel;
 
         numberOfMeshesTemp = 0;
         for (Node node: model.nodes){
@@ -74,8 +88,8 @@ public class LoDScene extends Scene {
             numberOfMeshesTemp++;
 
             node.parts.first().meshPart.mesh.setIndices(
-                levelOfDetailDTO.meshes.get(numberOfMeshesTemp - 1).lods.get(level).indicies);
-            node.parts.first().meshPart.size = levelOfDetailDTO.meshes.get(numberOfMeshesTemp - 1).lods.get(level).indicies.length;
+                levelOfDetailDTO.meshes.get(numberOfMeshesTemp - 1).lods.get(level).indices);
+            node.parts.first().meshPart.size = levelOfDetailDTO.meshes.get(numberOfMeshesTemp - 1).lods.get(level).indices.length;
 
             currentVertices += node.parts.first().meshPart.mesh.getNumVertices();
             currentIndices += node.parts.first().meshPart.mesh.getNumIndices();

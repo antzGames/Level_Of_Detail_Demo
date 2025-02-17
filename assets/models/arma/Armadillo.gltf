@@ -1,0 +1,175 @@
+{
+"asset": {
+	"generator": "GDX glTF exporter 1.0",
+	"version": "2.0"
+},
+"scenes": [
+	{
+		"nodes": [ 0 ]
+	}
+],
+"nodes": [
+	{
+		"name": "Sketchfab_model",
+		"children": [ 1 ],
+		"rotation": [ -0.7071068, 0, 0, 0.7071067 ]
+	},
+	{
+		"name": "Collada visual scene group",
+		"children": [ 2 ],
+		"rotation": [ 0.7071068, 0, 0, 0.7071067 ]
+	},
+	{
+		"name": "Armadillo_low",
+		"children": [ 3 ]
+	},
+	{
+		"name": "defaultMaterial",
+		"mesh": 0
+	}
+],
+"meshes": [
+	{
+		"primitives": [
+			{
+				"attributes": {
+					"NORMAL": 0,
+					"POSITION": 1,
+					"TANGENT": 3,
+					"TEXCOORD_0": 2
+				},
+				"indices": 4,
+				"material": 0
+			}
+		]
+	}
+],
+"images": [
+	{
+		"uri": "Armadillo_texture0.png"
+	},
+	{
+		"uri": "Armadillo_texture1.png"
+	},
+	{
+		"uri": "Armadillo_texture2.png"
+	}
+],
+"samplers": [
+	{
+		"minFilter": 9987
+	},
+	{
+		"minFilter": 9987
+	},
+	{
+		"minFilter": 9987
+	},
+	{
+		"minFilter": 9987
+	}
+],
+"textures": [
+	{
+		"source": 0,
+		"sampler": 0
+	},
+	{
+		"source": 1,
+		"sampler": 1
+	},
+	{
+		"source": 2,
+		"sampler": 2
+	},
+	{
+		"source": 2,
+		"sampler": 3
+	}
+],
+"accessors": [
+	{
+		"bufferView": 0,
+		"componentType": 5126,
+		"count": 5808,
+		"type": "VEC3"
+	},
+	{
+		"bufferView": 1,
+		"componentType": 5126,
+		"count": 5808,
+		"type": "VEC3",
+		"min": [ -1.5620807, -1.8040727, -1.1415217 ],
+		"max": [ 1.4425622, 1.7779804, 1.5783446 ]
+	},
+	{
+		"bufferView": 2,
+		"componentType": 5126,
+		"count": 5808,
+		"type": "VEC2"
+	},
+	{
+		"bufferView": 3,
+		"componentType": 5126,
+		"count": 5808,
+		"type": "VEC4"
+	},
+	{
+		"bufferView": 4,
+		"componentType": 5123,
+		"count": 30690,
+		"type": "SCALAR"
+	}
+],
+"materials": [
+	{
+		"name": "DefaultMaterial",
+		"normalTexture": {
+			"index": 1
+		},
+		"occlusionTexture": {
+			"index": 3
+		},
+		"pbrMetallicRoughness": {
+			"baseColorTexture": {
+				"index": 0
+			},
+			"metallicRoughnessTexture": {
+				"index": 2
+			}
+		}
+	}
+],
+"bufferViews": [
+	{
+		"byteLength": 69696,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 69696,
+		"byteLength": 69696,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 139392,
+		"byteLength": 46464,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 185856,
+		"byteLength": 92928,
+		"buffer": 0
+	},
+	{
+		"byteOffset": 278784,
+		"byteLength": 61380,
+		"buffer": 0
+	}
+],
+"buffers": [
+	{
+		"uri": "Armadillo.bin",
+		"byteLength": 340164
+	}
+]
+}

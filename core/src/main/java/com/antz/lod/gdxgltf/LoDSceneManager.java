@@ -26,7 +26,6 @@ public class LoDSceneManager extends SceneManager {
                     if (cameraDistance < ((LoDScene)r).levelOfDetailDTO.lodDistanceBreakpoints[i]) {
                         if (((LoDScene)r).currentLoDLevel != i) {
                             ((LoDScene)r).changeModelToLoDLevel(((LoDScene)r).modelInstance.model, i);
-                            ((LoDScene)r).currentLoDLevel = i;
                         }
 
                         break;
