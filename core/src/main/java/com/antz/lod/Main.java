@@ -138,7 +138,7 @@ public class Main extends ApplicationAdapter {
                 bitmapFont.draw(spriteBatch, "LoD"+ s.currentLoDLevel , x, y);
                 x += 42; count++;
                 if (count >= 10) {
-                    x = 10; y -= 20; count = 0;
+                    x = 10; y -= 25; count = 0;
                 }
             }
         } else {

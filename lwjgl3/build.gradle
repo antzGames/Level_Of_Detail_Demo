@@ -77,6 +77,8 @@ construo {
     humanName.set(appName)
     // Optional, defaults to project version property
     version.set("$projectVersion")
+  // Optional, defaults to application.mainClass or jar task main class
+  mainClass.set("com.antz.lod.lwjgl3.Lwjgl3Launcher")
 
     targets.configure {
       create("linuxX64", Target.Linux) {
