@@ -29,3 +29,4 @@ jobs:
         with:
           name: outputs-${{ matrix.os }}
           path: build
+          retention-days: 1
