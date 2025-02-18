@@ -20,6 +20,8 @@ jobs:
           java-version: '17'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew        
       - name: Build test project
         run: ./gradlew lwjgl3:packageLinuxX64 lwjgl3:packageMacX64 lwjgl3:packageWinX64
       - name: Artifact upload
