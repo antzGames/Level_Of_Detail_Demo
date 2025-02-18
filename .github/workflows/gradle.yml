@@ -26,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: outputs-${{ matrix.os }}
-          path: /bin
+          path: /lwjgl3/build
