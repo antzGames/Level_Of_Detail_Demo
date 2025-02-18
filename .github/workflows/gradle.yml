@@ -21,7 +21,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
       - name: Build test project
-        run: ./gradlew lwjgl:packageLinuxX64 lwjgl:packageMacX64 lwjgl:packageWinX64
+        run: ./gradlew lwjgl3:packageLinuxX64 lwjgl3:packageMacX64 lwjgl3:packageWinX64
       - name: Artifact upload
         uses: actions/upload-artifact@v4
         with:
