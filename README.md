@@ -35,14 +35,14 @@ You need to use the `LODSceneManager` class instead of gdx-gltf's SceneManager c
 
 Here are the two new methods that you need to use:
 
-To load the LOD meta data file:
+To load the LOD meta data file, use the new `LODScene` class method called `loadLoDs()`:
 ```java
     SceneAsset sceneAsset = new GLTFLoader().load("path to GTLF file");
     LoDScene scene = new LoDScene(sceneAsset.scene);
-    scene.loadLoDs(Gdx.files.internal("path to lod meta data file")); // NEW!!! load meta file
+    scene.loadLoDs(Gdx.files.internal("path to lod meta data")); // NEW!!! load meta file
 ```
 
-To update the LODs in `render()`
+To update the LODs in `render()`, call the `updateLoDs()`: 
 ```java
     sceneManager.update(delta);
     sceneManager.updateLoDs(); // NEW!!! check if LoDs need updating
