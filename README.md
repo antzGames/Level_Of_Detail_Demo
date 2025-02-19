@@ -11,9 +11,9 @@ To see a YouTube video on how to use this LOD solution: https://youtu.be/-jZFwxx
 ## Performance Gains
 
 | Hardware (CPU + GPU)                       | Stock libGDX | My LOD Solution  | Performance Gain |
-|--------------------------------------------|---------------|------------------|-------------------|
-| Desktop Ryzen 5500 + RTX 3050 8G           | 950 fps       | 1720 fps         | 81% faster        |
-| HP Laptop Intel i5 6200U + HD Graphics 520 | 34 fps        | 84 fps           | 147% faster       |
+|--------------------------------------------|---------------|------------------|------------------|
+| Desktop Ryzen 5500 + RTX 3050 8G           | 950 fps       | 1720 fps         | 1.81x faster     |
+| HP Laptop Intel i5 6200U + HD Graphics 520 | 34 fps        | 84 fps           | 2.47x faster     |
 
 Seems like you get better performance gains on lower end hardware.
 
@@ -41,7 +41,7 @@ engine provides, and how slow libGDX is by default.
 
 This project uses `gdx-gltf`.
 
-Copy the `dto` and `gdxgltf` packages to your project, or just use this project as a template.
+Copy the `dto` and `gdxgltf` java packages to your project, or just use this project as a template.
 
 You need to use the `LODScene` class instead of gdx-gltf's Scene class.
 You need to use the `LODSceneManager` class instead of gdx-gltf's SceneManager class.
