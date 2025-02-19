@@ -42,7 +42,7 @@ To load the LOD meta data file, use the new `LODScene` class method called `load
     scene.loadLoDs(Gdx.files.internal("path to lod meta data")); // NEW!!!
 ```
 
-To update the LODs in `render()`, call the `updateLoDs()`: 
+To update the LODs, call the `updateLoDs()` before the `LoDSceneManager`'s `render()`: 
 ```java
     sceneManager.update(delta);
     sceneManager.updateLoDs(); // NEW!!! check if LoDs need updating
