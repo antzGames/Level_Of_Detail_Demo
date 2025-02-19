@@ -9,24 +9,20 @@ for free for Linux/Windows users at: https://antzgames.itch.io/libgdx-meshoptimi
 ## Controls
 
 **L** KEY
-Toggles the LOD engine on/off.  This will allow you to see the **FPS difference** the LOD
+- Toggles the LOD engine on/off.  This will allow you to see the **FPS difference** the LOD
 engine provides, and how slow libGDX is by default.
 
 **WASD** KEYS
-
-This allows you to move the camera.
+- This allows you to move the camera.
 
 **MOUSE**
-
-This allows you to rotate the camera.
+- This allows you to rotate the camera.
 
 **R** KEY
-
-Resets the camera to its default position.
+- Resets the camera to its default position.
 
 **ESC** KEY
-
-Exits the application.
+- Exits the application.
 
 ## How to use this engine in my projects?
 
