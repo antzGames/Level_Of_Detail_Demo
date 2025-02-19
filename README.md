@@ -10,9 +10,9 @@ To see a YouTube video on how to use this LOD solution: https://youtu.be/-jZFwxx
 
 ## Performance Gains
 
-|---|---|---|
-|Hardware|Stock libGDX|My LOD Solution|
-|Ryzen 5500+RTX3050|950 fps|1720 fps|
+| Hardware | Stock libGDX | My LOD Solution | Performance Gain |
+| Ryzen 5500 + RTX3050 8G | 950 fps | 1720 fps | 81% faster |
+| Intel i5 6200U + HD Graphics 520 | 34 fps | 84 fps| 147% faster |
 
 ## Controls
 
