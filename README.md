@@ -29,7 +29,7 @@ engine provides, and how slow libGDX is by default.
 - This allows you to move the camera.
 
 **MOUSE**
-- This allows you to rotate the camera.
+- Dragging mouse allows you to rotate the camera.
 
 **R** KEY
 - Resets the camera to its default position.
