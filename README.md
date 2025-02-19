@@ -13,15 +13,19 @@ Toggles the LOD engine on/off.  This will allow you to see the **FPS difference*
 engine provides, and how slow libGDX is by default.
 
 **WASD** KEYS
+
 This allows you to move the camera.
 
 **MOUSE**
+
 This allows you to rotate the camera.
 
 **R** KEY
+
 Resets the camera to its default position.
 
 **ESC** KEY
+
 Exits the application.
 
 ## How to use this engine in my projects?
@@ -39,7 +43,7 @@ To load the LOD meta data file, use the new `LODScene` class method called `load
 ```java
     SceneAsset sceneAsset = new GLTFLoader().load("path to GTLF file");
     LoDScene scene = new LoDScene(sceneAsset.scene);
-    scene.loadLoDs(Gdx.files.internal("path to lod meta data")); // NEW!!! load meta file
+    scene.loadLoDs(Gdx.files.internal("path to lod meta data")); // NEW!!!
 ```
 
 To update the LODs in `render()`, call the `updateLoDs()`: 
